@@ -33,19 +33,34 @@ Add these scripts to your `package.json` file:
 }
 ```
 
+### 5️⃣ Add Eslint + Prettier config
+
+Install these dependencies:
+
+```bash
+npm i -D eslint prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-prettier eslint-config-prettier eslint-plugin-import
+```
+
+### 6️⃣ Configure Eslint and Prettier
+
+Create a `eslint.config.js` file in the root of the project. You can use the example included in this template.
+
 ## 🏃 Run the project
 
 ### Development mode (watch mode)
+
 ```bash
 npm run dev
 ```
 
 ### Build project
+
 ```bash
 npm run build
 ```
 
 ### Production mode
+
 ```bash
 npm start
 ```
