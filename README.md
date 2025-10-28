@@ -45,6 +45,20 @@ npm i -D eslint prettier @typescript-eslint/parser @typescript-eslint/eslint-plu
 
 Create a `eslint.config.js` file in the root of the project. You can use the example included in this template.
 
+### 7️⃣ Add scripts in package.json
+
+```json
+"scripts": {
+  "lint": "eslint . --ext .ts",
+  "lint:fix": "eslint . --ext .ts --fix",
+  "format": "prettier --write ."
+}
+```
+
+### 8️⃣ Configure VS Code settings
+
+Create a `.vscode/settings.json` file in the root of the project. You can use the example included in this template.
+
 ## 🏃 Run the project
 
 ### Development mode (watch mode)
