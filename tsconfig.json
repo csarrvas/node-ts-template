@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "NodeNext",
+    "module": "NodeNext", // TypeScript requires .js extensions in imports, even when importing .ts files
     "moduleResolution": "NodeNext",
     "rootDir": "src",
     "outDir": "dist",
@@ -13,5 +13,6 @@
     "resolveJsonModule": true,
     "noImplicitAny": true
   },
-  "include": ["src"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

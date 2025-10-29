@@ -59,6 +59,22 @@ Create a `eslint.config.js` file in the root of the project. You can use the exa
 
 Create a `.vscode/settings.json` file in the root of the project. You can use the example included in this template.
 
+### 9️⃣ Add Jest
+
+Install these dependencies:
+
+```bash
+npm i -D jest ts-jest @jest/globals @types/jest
+```
+
+### 🔟 Configure VS Code settings
+
+Create a `jest.config.js` file in the root of the project. You can use the example included in this template.
+
+#
+
+🧪 Added a small demo app with `node-cron` for demo purposes.
+
 ## 🏃 Run the project
 
 ### Development mode (watch mode)
@@ -73,7 +89,7 @@ npm run dev
 npm run build
 ```
 
-### Production mode
+### Production mode (after build)
 
 ```bash
 npm start

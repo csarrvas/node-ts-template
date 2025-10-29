@@ -1,9 +1,7 @@
-import { log } from './utils/logger.js';
+import cron from 'node-cron';
 
-const PORT = process.env.PORT || 3000;
+import { syncDB } from './tasks/sync-db.js';
 
-function main() {
-  log(`🚀 Server running on port ${PORT}`);
-}
+console.log('Starting the app');
 
-main();
+cron.schedule('1-59/5 * * * * *', syncDB);
