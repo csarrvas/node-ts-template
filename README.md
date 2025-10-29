@@ -71,6 +71,18 @@ npm i -D jest ts-jest @jest/globals @types/jest
 
 Create a `jest.config.js` file in the root of the project. You can use the example included in this template.
 
+### ➡️ Dockerizing app (useful commands at the end)
+
+Build docker image
+
+```bash
+docker build -t node-ts-template:loki .
+```
+
+```bash
+docker container run node-ts-template:loki
+```
+
 #
 
 🧪 Added a small demo app with `node-cron` for demo purposes.
@@ -98,3 +110,12 @@ npm start
 ---
 
 ⭐ **Happy coding!**
+
+### Docker commands 👀
+
+```bash
+docker pull `image-name:tag`
+docker container run -d `image-name:tag`
+docker container ls -a
+docker exec -it `container-id` /bin/sh
+```
