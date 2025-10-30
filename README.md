@@ -119,3 +119,33 @@ docker container run -d `image-name:tag`
 docker container ls -a
 docker exec -it `container-id` /bin/sh
 ```
+
+#
+
+IMAGE=username/image
+TAG=1.0.0 # (or latest)
+
+### Build and push (one arch)
+
+```bash
+docker build -t $IMAGE:$TAG .
+docker push $IMAGE:$TAG
+
+# Optional, add latest tag
+docker tag $IMAGE:$TAG $IMAGE:latest
+docker push $IMAGE:latest
+```
+
+### Build and push (multi arch)
+
+```bash
+docker buildx create --name multiarch --use || docker buildx use multiarch
+docker buildx inspect --bootstrap
+
+docker buildx build \
+  --platform linux/amd64,linux/arm64 \
+  -t $IMAGE:$TAG \
+  -t $IMAGE:latest \
+  --push \
+  .
+```
